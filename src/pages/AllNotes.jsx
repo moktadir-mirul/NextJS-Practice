@@ -1,16 +1,6 @@
-import { useEffect, useState } from "react";
 
 
-function AllNotes () {
-    const [posts, setPost] = useState([]);
-
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
-        .then((res) => res.json())
-        .then((data) => {
-            setPost(data);
-        })
-    },[])
+export default function AllNotes ({posts}) {
     return(
         <div>
             <h1 className="posthd">All Notes</h1>
@@ -24,4 +14,9 @@ function AllNotes () {
     )
 }
 
-export default AllNotes;
+export async function getStaticProps() {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5');
+    const posts = await res.json();
+    return{props: {posts}}
+}
+
