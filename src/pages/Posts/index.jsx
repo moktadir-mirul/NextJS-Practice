@@ -1,3 +1,4 @@
+import AddPost from "@/Components/AddPosts";
 import Link from "next/link";
 // import { useState } from "react";
 
@@ -34,6 +35,6 @@ export async function getStaticProps() {
     const res = await fetch('http://localhost:4000/posts');
     const posts = await res.json();
     return {
-        props: {posts}, revalidate: 10
+        props: {posts}
     }
 }

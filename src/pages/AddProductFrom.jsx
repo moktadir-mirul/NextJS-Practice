@@ -1,3 +1,4 @@
+import AddPost from "@/Components/AddPosts";
 import { useState } from "react";
 
 
@@ -79,6 +80,7 @@ export default function AddProduct() {
 				/>
 				<input type="submit" />
 			</form>
+			<AddPost />
 		</>
 	);
 } 
