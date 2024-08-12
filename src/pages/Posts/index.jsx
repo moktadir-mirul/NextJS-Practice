@@ -1,6 +1,21 @@
 import Link from "next/link";
+// import { useState } from "react";
+
+
+
+
 
 export default function PostTitles({posts}) {
+
+//     const [posts, setPosts] = useState([]);
+
+// fetch('http://localhost:4000/posts')
+// .then(() => {
+//     fetch('http://localhost:3000/api/postApi')
+// })
+// .then((res) => res.json())
+// .then((data) => setPosts(data))
+
     return(
         <div>
             <h1 className="posthd">All Posts</h1>
@@ -19,6 +34,6 @@ export async function getStaticProps() {
     const res = await fetch('http://localhost:4000/posts');
     const posts = await res.json();
     return {
-        props: {posts}
+        props: {posts}, revalidate: 10
     }
 }
