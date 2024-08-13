@@ -1,3 +1,3 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Dynamic Routing, Incremental Static Regeneration useRouter,  Revalidation is introduced.
+App Router is introduced.
