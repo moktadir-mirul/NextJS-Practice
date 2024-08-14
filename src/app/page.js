@@ -1,7 +1,10 @@
-import { ProductCard } from "@/Components/ProductCard";
+import { ProductCard } from "./Components/ProductCard";
 
 
-export default function Shop({products}) {
+
+export default async function Shop() {
+    const res = await fetch('http://localhost:4000/products', {next: {revalidate: 60}})
+    const products = await res.json();
     return(
 		
 		<div>
@@ -30,13 +33,4 @@ export default function Shop({products}) {
 			</div>
 		</div>
     )
-}
-
-
-export async function getStaticProps() {
-    const res = await fetch('http://localhost:4000/products');
-    const products = await res.json();
-    return {
-        props: {products}
-    }
 }
