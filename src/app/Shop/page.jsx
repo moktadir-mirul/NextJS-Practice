@@ -1,5 +1,4 @@
-import { AllProducts } from "./Components/AllProducts";
-import "./page.module.css";
+import { AllProducts } from "../Components/AllProducts"
 
 
 
@@ -7,6 +6,7 @@ export default async function Shop() {
     return(
 		
 		<div>
+            
 			<div className="page-banner">
 				<div className="page-banner__details">
 					<div className="page-banner__details__title">

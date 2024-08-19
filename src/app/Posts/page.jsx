@@ -1,12 +1,10 @@
 import { revalidatePath, revalidateTag } from "next/cache";
 import Link from "next/link";
 
-export async function revalidTask(){
-    revalidateTag('AllPost')
-}
 
 export default async function PostsTitle() {
-    const res = await fetch('http://localhost:4000/posts', {next: {tags: ['AllPost']}});
+    // throw new Error("Something Came up,sorry!");
+    const res = await fetch('http://localhost:4000/posts');
     const posts = await res.json();
     return(
         <div>
