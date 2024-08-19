@@ -1,6 +1,6 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 
 export const AddAProduct = async (formData) => {
     const newProduct = {
@@ -15,5 +15,6 @@ export const AddAProduct = async (formData) => {
         body: JSON.stringify(newProduct),
         headers: {"content-type" : "application/json"},
     })
-    revalidatePath("/Shop");
+    // revalidatePath("/Shop");
+    revalidateTag("products");
 }
