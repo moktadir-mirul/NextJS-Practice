@@ -1,24 +1,21 @@
-import { AllProducts } from "../Components/AllProducts"
+import Link from "next/link"
 
 
-
-export default async function Shop() {
+export default function Menu() {
     return(
-		
-		<div>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <Link class="navbar-brand" href={"/Shop"}>Shop</Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <Link class="nav-link active" aria-current="page" href={"/AddProduct"}>Add Porduct</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <Link class="nav-link" href={"/Posts"}>Posts</Link>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,26 +39,5 @@ export default async function Shop() {
     </div>
   </div>
 </nav>
-            
-			<div className="page-banner">
-				<div className="page-banner__details">
-					<div className="page-banner__details__title">
-						<h1>Our E-commerce Website</h1>
-					</div>
-				</div>
-			</div>
-			<div className="section">
-				<div className="container">
-					<div className="section__head">
-						<div className="product__details__title">
-							<h2>All Products</h2>
-						</div>
-					</div>
-					<div className="section__content">
-						<AllProducts />
-					</div>
-				</div>
-			</div>
-		</div>
     )
 }

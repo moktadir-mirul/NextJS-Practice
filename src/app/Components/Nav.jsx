@@ -9,6 +9,7 @@ export const Nav= () => {
                 <li><Link href={"/AllNotes"}>All Notes</Link></li>
                 <li><Link href={"/AddProduct"}>Add Product</Link></li>
                 <li><Link href={"/Posts"}>Posts</Link></li>
+                
             </ul>
         </div>
     )
