@@ -1,11 +1,11 @@
 import Link from "next/link"
 
 
-export default function Menu() {
+export default function Nav2() {
     return(
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <Link class="navbar-brand" href={"/Shop"}>Shop</Link>
+    <Link class="navbar-brand" href={"/"}>Shop</Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

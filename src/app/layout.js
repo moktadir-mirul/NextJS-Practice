@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "./globals.css";
 import BootstrapClient from "./Components/BootstrapClient";
 import { Nav } from "./Components/Nav";
+import Menu from "./Menu/page";
+import Nav2 from "./Components/Nav2";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Nav />
+      <Nav2 />
       {children}
       <BootstrapClient />
       </body>
