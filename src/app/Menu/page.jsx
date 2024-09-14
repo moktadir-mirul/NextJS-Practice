@@ -1,12 +1,9 @@
-import { AllProducts } from "../Components/AllProducts"
 
 
 
-export default async function Shop() {
+export default function Menu() {
     return(
-		
-		<div>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,26 +39,5 @@ export default async function Shop() {
     </div>
   </div>
 </nav>
-            
-			<div className="page-banner">
-				<div className="page-banner__details">
-					<div className="page-banner__details__title">
-						<h1>Our E-commerce Website</h1>
-					</div>
-				</div>
-			</div>
-			<div className="section">
-				<div className="container">
-					<div className="section__head">
-						<div className="product__details__title">
-							<h2>All Products</h2>
-						</div>
-					</div>
-					<div className="section__content">
-						<AllProducts />
-					</div>
-				</div>
-			</div>
-		</div>
     )
 }

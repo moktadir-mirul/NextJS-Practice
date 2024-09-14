@@ -3,10 +3,12 @@ import "./page.module.css";
 
 
 
+
 export default async function Shop() {
     return(
 		
 		<div>
+			<h1 className="text-danger">Hello Bootstrap</h1>
 			<div className="page-banner">
 				<div className="page-banner__details">
 					<div className="page-banner__details__title">
